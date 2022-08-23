@@ -4,6 +4,8 @@ import VideoList from "./components/VideoList";
 import VideoDetail from "./components/VideoDetail";
 import useVideos from "./hooks/useVideos";
 
+import "./app.css";
+
 const App = () => {
   const [selectedVideo, setSelectedVideo] = useState(null);
   const [videos, search] = useVideos("mern-stack");
@@ -13,7 +15,7 @@ const App = () => {
   }, [videos]);
 
   return (
-    <div className='ui container'>
+    <div className='ui container '>
       <SearchBar onFormSubmit={search} />
       <div className='ui grid'>
         <div className='ui row'>
